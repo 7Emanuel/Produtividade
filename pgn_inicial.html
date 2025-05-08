@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADRA - Página Inicial</title>
+  <link rel="stylesheet" href="estilo/pgn_inicial.css" />
+</head>
+<body>
+  <img src="imagens/usuar.png" alt="Ícone de Usuário" class="user-icon" />
+  <h3 id="login">Fazer o login</h3>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required /><br /><br />
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required /><br /><br />
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <header class="header">
+      <img src="imagens/advem.png" alt="Logo Adventista" class="logo-adventista" />
+    </header>
+
+    <div class="logo-center">
+      <img src="imagens/adra.png" alt="Logo ADRA" class="adra-logo" />
+    </div>
+
+    <div class="buttons">
+      <div class="btn" onclick="location.href='pgn_doador.html';">
+        <button class="btn">Doador</button>
+      </div>
+      <div class="btn" onclick="location.href='pgn_necessitado.html';">
+        <button class="btn">Necessitado</button>
+      </div>
+    </div>
+
+    <p class="description">
+      A Adra é uma organização humanitária ligada à Igreja Adventista, presente em mais de 130 países. Ela trabalha em projetos de desenvolvimento e socorro em emergências, ajudando comunidades vulneráveis com educação, saúde e alimentação.
+    </p>
+
+    <button class="btn-more" id="abrirMaisBtn">Mais</button>
+
+<!-- Modal "Mais Sobre a ADRA" -->
+<div id="modalMais" class="modal">
+  <div class="modal-content">
+    <span class="close-mais">&times;</span>
+    <img src="imagens/adra.png" alt="Logo da ADRA" class="adra-logo" style="width: 100px; margin-bottom: 15px;">
+    <p>
+      A ADRA é uma organização humanitária que se fundamenta nos valores de compaixão, justiça e amor ao próximo, inspirados pelo exemplo de Jesus Cristo. Ela busca atuar de maneira transformadora, levando esperança e suporte às comunidades mais vulneráveis.
+      <br><br>
+      O aplicativo em desenvolvimento é uma extensão desses valores, criado para facilitar o cadastro de pessoas interessadas em doar e receber doações, promovendo um ciclo contínuo de generosidade e solidariedade. Além de atender às necessidades materiais, o aplicativo também visa fortalecer a fé, oferecendo recursos para encorajar um estilo de vida baseado no serviço ao próximo.
+    </p>
+  </div>
+</div>
+
+  </div>
+
+  <script src="script/pgn_inicial.js"></script>
+</body>
+</html>

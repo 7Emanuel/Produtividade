@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Modal oculto inicialmente */
+.modal {
+    display: none; /* O modal começa escondido */
+    position: fixed;
+    z-index: 1; /* Sobrepõe os outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Suaviza a transição */
+}
+
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
+    position: relative; /* Para posicionar o botão de fechar */
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+    transform: scale(0.8); /* Efeito de escala menor ao início */
+}
+
+/* Quando o modal for exibido, aumenta sua escala */
+.modal.show .modal-content {
+    transform: scale(1); /* Tamanho normal ao ser exibido */
+}
+
+/* Botão de fechar estilizado */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #000; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilo do formulário */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Campo de entrada de texto */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botão de envio */
+.modal-content button[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #004b99; /* Cor mais escura ao passar o mouse */
+}
+
+#login {
+    position: absolute;
+    top: 35px;   /* Distância do topo da página */
+    right: 80px; /* Distância da lateral direita */
+    font-size: 18px;  /* Tamanho da fonte (ajuste conforme necessário) */
+    color: #333;  /* Cor do texto (você pode ajustar a cor conforme necessário) */
+    margin: 0;  /* Remove a margem padrão do h3 */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/fotos-gratis/vista-superior-da-mao-de-papel-segurando-um-coracao-com-espaco-de-copia_23-2148635148.jpg?t=st=1728651939~exp=1728655539~hmac=401cbc6664ff55177816f33e6a1b4fe0ff69e4f96f879491fb54d353d1f22fc0&w=826);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-adventista {
+    width: 40px;
+    height: 40px;
+}
+
+.user-icon {
+    position: absolute;
+    top: 20px; /* Ajuste a distância do topo */
+    right: 20px; /* Ajuste a distância da lateral direita */
+    width: 50px; /* Defina o tamanho da imagem */
+    height: auto;
+    border-radius: 30px;
+}
+
+
+.logo-center {
+    margin: 20px 0;
+}
+
+.adra-logo {
+    width: 100px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+.description {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.btn-more {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-more:hover {
+    background-color: #333;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.png');
+    background-size: cover;
+    opacity: 0.1;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+
+/* Modal base */
+#modalMais {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo refinado do conteúdo do modal */
+  .modal-content.modal-mais {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeInUp 0.4s ease-out;
+  }
+  
+  /* Animação */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Logo central e estilizada */
+  .adra-logo-modal {
+    width: 90px;
+    margin-bottom: 20px;
+  }
+  
+  /* Título elegante */
+  .modal-title {
+    font-size: 24px;
+    color: #007824;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Texto estilizado */
+  .modal-text {
+    font-size: 16px;
+    color: #444;
+    text-align: justify;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Botão fechar bonito */
+  .close-mais {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .close-mais:hover {
+    color: #e53935;
+  }
+  
